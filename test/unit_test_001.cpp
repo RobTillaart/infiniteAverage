@@ -66,11 +66,13 @@ unittest(test_add)
   assertEqual(1, iavg.count());
   assertEqual(10000000, iavg.whole());
   assertEqualFloat(0, iavg.decimals(), 0.0001);
+  assertEqualFloat(10000000, iavg.average(), 0.0001);
 
   iavg.add(1);
   assertEqual(2, iavg.count());
-  assertEqual(5000000, iavg.whole());
-  assertEqualFloat(0.5, iavg.decimals(), 0.0001);
+  assertEqual(10000001, iavg.whole());
+  assertEqualFloat(0, iavg.decimals(), 0.0001);
+  assertEqualFloat(5000000.5, iavg.average(), 0.5);  // as output is just a float ...
 }
 
 
