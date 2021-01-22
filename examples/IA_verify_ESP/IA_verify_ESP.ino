@@ -14,6 +14,9 @@ IAVG IA;
 
 uint32_t lastTime = 0;
 
+double sum = 0;
+
+
 void setup()
 {
   Serial.begin(115200);
@@ -23,7 +26,9 @@ void setup()
 
   while (1)
   {
-    IA.add(random(10000) * 0.0001);
+    float r = random(10000) * 0.0001;
+    IA.add(r);
+    sum += r;
 
     if (millis() - lastTime >= 1000)
     {
@@ -32,9 +37,13 @@ void setup()
       Serial.print("\t");
       Serial.print(IA.whole());
       Serial.print("\t");
-      Serial.print(IA.decimals(), 5);
+      Serial.print(IA.decimals(), 10);
       Serial.print("\t\t");
-      Serial.print(IA.average(), 7);
+      Serial.print(IA.average(), 10);
+      Serial.print("\t");
+      Serial.print(sum / IA.count(), 10);
+      Serial.print("\t");
+      Serial.print(abs(IA.average() - sum / IA.count()), 10);
       Serial.print("\n");
     }
   }
