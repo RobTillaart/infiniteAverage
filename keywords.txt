@@ -13,6 +13,8 @@ average	KEYWORD2
 decimals	KEYWORD2
 whole	KEYWORD2
 count	KEYWORD2
+maximum	KEYWORD2
+minimum	KEYWORD2
 
 # Instances (KEYWORD2)
 
