@@ -15,7 +15,7 @@ Arduino Library to calculate an average of many samples
 
 This library is an experimental library that cascades a float and a uint32_t type.
 It was created from an idea when an overflow was encountered in my Statistic Class
-due too many samples. 
+due too many samples. https://github.com/RobTillaart/statistic
 
 
 #### Problem
@@ -23,6 +23,7 @@ due too many samples.
 As an 32 bit float has ~7 decimals precision, after 10 million additions the sum
 becomes 7 orders of magnitude larger than individual samples. From that moment
 the addition will not increase the sum correctly or even not at all.
+(assume you add values between 0-100 e.g. temperatures)
 
 Taking the average is taking the sum and divide that by the count of the numbers.
 Only if the count is fixed one could divide the samples first and then sum them.
@@ -102,7 +103,7 @@ to get around 28 significant digits => 18.10 format
   This would allow to adjust to known order of size of the numbers.
   (e.g. if numbers are all in the billions the uint32_t would overflow very fast)
 - investigate other math with this data type, starting with + - / \* ?
-- printable interface?
+- printable interface?  sprintf() ?
 - play if time permits.
 - update documentation
 - add examples
