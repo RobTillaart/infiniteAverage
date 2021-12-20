@@ -86,6 +86,15 @@ unittest(test_threshold)
   fprintf(stderr, "%d \t%d \t%f\n", iavg.count(), iavg.whole(), iavg.average());
 
 
+  iavg.reset();
+  iavg.setDivideThreshold(1000000);
+  for (int i = 0; i < 1000; i++)
+  {
+    iavg.add(1.0 * i);
+  }
+  fprintf(stderr, "%d \t%d \t%f\n", iavg.count(), iavg.whole(), iavg.average());
+
+
   // shows the effects of small thresholds with non-uniform data
   for (int th = 8; th < 1024; th *= 2)
   {
