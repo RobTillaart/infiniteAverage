@@ -87,7 +87,7 @@ unittest(test_threshold)
 
 
   // shows the effects of (relative) small thresholds with non-uniform data
-  for (uint32_t th = 500000; th < 1000000; th += 100000)
+  for (uint32_t th = 100000; th < 1000000; th += 100000)
   {
     iavg.reset();
     iavg.setDivideThreshold(th);
