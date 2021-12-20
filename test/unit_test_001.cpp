@@ -84,9 +84,8 @@ unittest(test_threshold)
   for (int i = 0; i < 100; i++)
   {
     iavg.add(1.0 * i);
-    fprintf(stderr, ".");
+    fprintf(stderr, "%d: \t%ld \t%f\n", iavg.count(), iavg.whole(), iavg.average());
   }
-  fprintf(stderr, "%d: \t%ld \t%f\n", iavg.count(), iavg.whole(), iavg.average());
 }
 
 
