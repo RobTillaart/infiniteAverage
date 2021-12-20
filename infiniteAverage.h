@@ -53,7 +53,8 @@ public:
       _sum -= 1;
     }
     //  scale back factor 2 when overflow comes near
-    if (_count >= _threshold)
+    //  TODO abs(_overflow)
+    if ( (_overflow >= _threshold) || (_count >= 4294967000 ) )
     {
       if (_overflow & 1) _sum += 1.0;    // fix rounding error.
       _count /= 2;
@@ -120,7 +121,7 @@ private:
   float    _maximum  = 0;
   uint32_t _overflow = 0;
   uint32_t _count    = 0;
-  uint32_t _threshold = (1UL << 31);
+  uint32_t _threshold = (1UL << 30);
 };
 
 

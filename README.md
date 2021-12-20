@@ -40,12 +40,12 @@ but this precision is only internal to do some math. When the average() is calcu
 the value returned is "just" a float.
 
 (since 0.1.2)
-If the library detects that there are 2 billion++ (0x8000000) samples added or if the 
-whole part of the sum reaches that number, all internal counters are divided by 2. 
+If the library detects that there are 4294967000 (almost 2^32) samples added or 
+if the internal sum of samples reaches a threshold (default 2^30 ~~ 1 billion) , 
+the internal counter and sum are divided by 2. 
 That does not affect the minimum and maximum and the average only very slightly.
 
-Since version 0.1.4 users can change this threshold and adjust it to data added. 
-NB if you add only small values e.g between 0..100 this threshold may be at 4 billion.
+Since 0.1.4 users can change this threshold and adjust it to data added. 
 
 
 #### Conclusion (for now)
@@ -82,15 +82,27 @@ Note this may be scaled back a power of 2 (2,4,8,16, ...).
 
 ### 0.1.4
 
-Users can set the threshold value when the sum and count are divided by two, 
-to prevent internal counters to overflow. Default at startup this value is (1UL << 31).
+Users can set a threshold value to prevent the internal sum to overflow.
+Default at startup this value is (1UL << 30), and depending on the maxValue 
+per sample added this should be set lower.
+When the threshold is reached both the sum and the internal counter are divided by 2.
+This keeps the average almost the same.
+
+The internal sample counter will trigger the divide by 2 action when 4294967000 
+samples are added. That is a lot, roughly 1 samples per second for 130 years,
+or 1000 samples per second for 40 days.
+
 - **void setDivideThreshold(uint32_t threshold)**
 - **uint32_t getDivideThreshold()**
+
 
 ### 0.1.5
 
 - Fixed a rounding error of the whole part when dividing by 2.
-- Fixed threshold code
+
+The threshold value should be as large as possible to get an accurate value.
+If n is small it works more like a low pass filter, returning the average of 
+the last n elements. This is especially visible if the data is less uniform.
 
 
 ## Operation

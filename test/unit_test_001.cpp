@@ -76,10 +76,10 @@ unittest(test_add)
 
 unittest(test_threshold)
 {
-  // show the effect of threshold
   IAVG iavg;
 
-  for (int th =8; th < 1024; th *= 2)
+  // shows the effects of small thresholds with non-uniform data
+  for (int th = 8; th < 1024; th *= 2)
   {
     iavg.reset();
     iavg.setDivideThreshold(th);
