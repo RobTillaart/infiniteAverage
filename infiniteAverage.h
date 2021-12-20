@@ -60,6 +60,7 @@ public:
       _count /= 2;
       _overflow /= 2;
       _sum /= 2;
+      Serial.print(".");
     }
   };
 

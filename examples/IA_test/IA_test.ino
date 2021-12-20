@@ -18,12 +18,13 @@ void setup()
   Serial.println(__FILE__);
 
   IA.reset();
+  IA.setDivideThreshold(1024);
 
   while (1)
   {
     IA.add(random(10000) * 0.0001);
 
-    if (millis() - lastTime >= 1000)
+    if (millis() - lastTime >= 500)
     {
       lastTime = millis();
       Serial.print(IA.count());
