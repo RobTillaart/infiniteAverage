@@ -80,10 +80,11 @@ unittest(test_threshold)
   IAVG iavg;
 
   iavg.reset();
-  iavg.setDivideThreshold(256);
-  for (int i = 0; i < 1000; i++)
+  iavg.setDivideThreshold(75);
+  for (int i = 0; i < 100; i++)
   {
-    iavg.add(i);
+    iavg.add(1.0 * i);
+    fprintf(stderr, ".");
   }
   fprintf(stderr, "%d: \t%ld \t%f\n", iavg.count(), iavg.whole(), iavg.average());
 }
