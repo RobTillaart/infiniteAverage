@@ -79,16 +79,13 @@ unittest(test_threshold)
   // show the effect of threshold
   IAVG iavg;
 
-  for (int th = 8; th < 256; th *= 2)
+  iavg.reset();
+  iavg.setDivideThreshold(256);
+  for (int i = 0; i < 1000; i++)
   {
-    iavg.reset();
-    iavg.setDivideThreshold(th);
-    for (int i = 0; i < 10; i++)
-    {
-      iavg.add(i);
-      fprintf(stderr, "%3d: \t%f \t%ld \t%ld \n", i, iavg.average(), iavg.whole(), iavg.count());
-    }
+    iavg.add(i);
   }
+  fprintf(stderr, "%3d: \t%f \t%ld \t%ld \n", i, iavg.average(), iavg.whole(), iavg.count());
 }
 
 
