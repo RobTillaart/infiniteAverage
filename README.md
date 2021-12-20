@@ -104,7 +104,8 @@ or 1000 samples per second for 40 days.
 
 The threshold value should be as large as possible to get an accurate value.
 If n is small compared to maxValue(sample) there will be side effects that
-might break your project. So be careful! 
+might break your project. The average will tend to the average of the last
+added values. So be careful! 
 
 
 ## Operation
