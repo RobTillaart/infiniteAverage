@@ -83,7 +83,7 @@ unittest(test_threshold)
   {
     iavg.reset();
     iavg.setDivideThreshold(th);
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 1000; i++)
     {
       iavg.add(1.0 * i);
     }
