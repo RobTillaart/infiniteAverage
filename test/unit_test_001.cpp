@@ -83,7 +83,7 @@ unittest(test_threshold)
   {
     iavg.add(1.0 * i);
   }
-  fprintf(stderr, "%3d  %d \t%ld \t%f\n", th, iavg.count(), iavg.whole(), iavg.average());
+  fprintf(stderr, "%3d  %d \t%d \t%f\n", th, iavg.count(), iavg.whole(), iavg.average());
 
 
   // shows the effects of small thresholds with non-uniform data
@@ -95,7 +95,7 @@ unittest(test_threshold)
     {
       iavg.add(1.0 * i);
     }
-    fprintf(stderr, "%3d  %d \t%ld \t%f\n", th, iavg.count(), iavg.whole(), iavg.average());
+    fprintf(stderr, "%3d  %d \t%d \t%f\n", th, iavg.count(), iavg.whole(), iavg.average());
   }
 }
 
