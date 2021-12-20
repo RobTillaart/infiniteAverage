@@ -45,7 +45,9 @@ if the internal sum of samples reaches a threshold (default 2^30 ~~ 1 billion) ,
 the internal counter and sum are divided by 2. 
 That does not affect the minimum and maximum and the average only very slightly.
 
-Since 0.1.4 users can change this threshold and adjust it to data added. 
+Since 0.1.4 users can change this threshold and adjust it to data added.
+Depending on the data and maxValue per sampel this can have side effects.
+Use at your own risk.
 
 
 #### Conclusion (for now)
@@ -101,8 +103,8 @@ or 1000 samples per second for 40 days.
 - Fixed a rounding error of the whole part when dividing by 2.
 
 The threshold value should be as large as possible to get an accurate value.
-If n is small it works more like a low pass filter, returning the average of 
-the last n elements. This is especially visible if the data is less uniform.
+If n is small compared to maxValue(sample) there will be side effects that
+might break your project. So be careful! 
 
 
 ## Operation
