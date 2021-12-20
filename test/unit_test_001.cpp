@@ -85,7 +85,7 @@ unittest(test_threshold)
   {
     iavg.add(i);
   }
-  fprintf(stderr, "%3d: \t%f \t%ld \t%ld \n", i, iavg.average(), iavg.whole(), iavg.count());
+  fprintf(stderr, "%d: \t%ld \t%f\n", iavg.count(), iavg.whole(), iavg.average());
 }
 
 
