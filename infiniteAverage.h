@@ -53,8 +53,7 @@ public:
       _sum -= 1;
     }
     //  scale back factor 2 when overflow comes near
-    //  (should be a abs(_overflow) value to support negative values)
-    if ((_count >= _threshold)|| (_overflow >= _threshold))
+    if (_count >= _threshold)
     {
       if (_overflow & 1) _sum += 1.0;    // fix rounding error.
       _count /= 2;

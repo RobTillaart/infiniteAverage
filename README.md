@@ -89,7 +89,8 @@ to prevent internal counters to overflow. Default at startup this value is (1UL 
 
 ### 0.1.5
 
-Fixed a rounding error of the whole part when dividing by 2.
+- Fixed a rounding error of the whole part when dividing by 2.
+- Fixed threshold code
 
 
 ## Operation
