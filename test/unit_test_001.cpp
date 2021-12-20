@@ -78,6 +78,14 @@ unittest(test_threshold)
 {
   IAVG iavg;
 
+  iavg.reset();
+  for (int i = 0; i < 1000; i++)
+  {
+    iavg.add(1.0 * i);
+  }
+  fprintf(stderr, "%3d  %d \t%ld \t%f\n", th, iavg.count(), iavg.whole(), iavg.average());
+
+
   // shows the effects of small thresholds with non-uniform data
   for (int th = 8; th < 1024; th *= 2)
   {
