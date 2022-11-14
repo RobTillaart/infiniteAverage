@@ -12,6 +12,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - fix URL in .h file
 
 
+## [0.1.5] - 2021-11-05
+- fix rounding error
+- update license
+- fix threshold
+- fix library.json
+- update readme.md
+
+## [0.1.4] - 2021-12-20
+
+
 No changelog recorded before.
 
 
