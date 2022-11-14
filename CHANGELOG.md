@@ -1,4 +1,4 @@
-# Change Log INA219
+# Change Log InfiniteAverage
 
 All notable changes to this project will be documented in this file.
 
