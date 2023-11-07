@@ -1,12 +1,12 @@
 
-[![Arduino CI](https://github.com/RobTillaart/XXXXXXXX/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
-[![Arduino-lint](https://github.com/RobTillaart/XXXXXXXX/actions/workflows/arduino-lint.yml/badge.svg)](https://github.com/RobTillaart/XXXXXXXX/actions/workflows/arduino-lint.yml)
-[![JSON check](https://github.com/RobTillaart/XXXXXXXX/actions/workflows/jsoncheck.yml/badge.svg)](https://github.com/RobTillaart/XXXXXXXX/actions/workflows/jsoncheck.yml)
-[![GitHub issues](https://img.shields.io/github/issues/RobTillaart/XXXXXXXX.svg)](https://github.com/RobTillaart/XXXXXXXX/issues)
+[![Arduino CI](https://github.com/RobTillaart/infiniteAverage/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
+[![Arduino-lint](https://github.com/RobTillaart/infiniteAverage/actions/workflows/arduino-lint.yml/badge.svg)](https://github.com/RobTillaart/infiniteAverage/actions/workflows/arduino-lint.yml)
+[![JSON check](https://github.com/RobTillaart/infiniteAverage/actions/workflows/jsoncheck.yml/badge.svg)](https://github.com/RobTillaart/infiniteAverage/actions/workflows/jsoncheck.yml)
+[![GitHub issues](https://img.shields.io/github/issues/RobTillaart/infiniteAverage.svg)](https://github.com/RobTillaart/infiniteAverage/issues)
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/XXXXXXXX/blob/master/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/RobTillaart/XXXXXXXX.svg?maxAge=3600)](https://github.com/RobTillaart/XXXXXXXX/releases)
-[![PlatformIO Registry](https://badges.registry.platformio.org/packages/robtillaart/library/XXXXXXXX.svg)](https://registry.platformio.org/libraries/robtillaart/XXXXXXXX)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/infiniteAverage/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/RobTillaart/infiniteAverage.svg?maxAge=3600)](https://github.com/RobTillaart/infiniteAverage/releases)
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/robtillaart/library/infiniteAverage.svg)](https://registry.platformio.org/libraries/robtillaart/infiniteAverage)
 
 
 # infiniteAverage
