@@ -2,7 +2,7 @@
 //    FILE: IA_test.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo
-//    DATE: 2021-01-21
+//     URL: https://github.com/RobTillaart/infiniteAverage
 
 
 #include "infiniteAverage.h"
@@ -14,15 +14,20 @@ uint32_t lastTime = 0;
 
 void setup()
 {
+  //  while (!Serial);  // uncomment if needed
   Serial.begin(115200);
+  Serial.println();
   Serial.println(__FILE__);
+  Serial.print("IAVG_LIB_VERSION: ");
+  Serial.println(IAVG_LIB_VERSION);
+  Serial.println();
 
   IA.reset();
   IA.setDivideThreshold(1024);
 
   while (1)
   {
-    IA.add(random(10000) * 0.0001);
+    IA.add(0.0001);
 
     if (millis() - lastTime >= 500)
     {
@@ -45,5 +50,4 @@ void loop()
 }
 
 
-// -- END OF FILE --
-
+//  -- END OF FILE --
